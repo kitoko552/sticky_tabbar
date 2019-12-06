@@ -25,6 +25,7 @@ const _tabs = [
 
 const String _appBarTitle = 'Fruits';
 
+/// Sticky TabBarを実現するページ
 class StickyTabsPage extends StatelessWidget {
   const StickyTabsPage();
 
@@ -113,6 +114,7 @@ class _StickyTabBarDelegate extends SliverPersistentHeaderDelegate {
   }
 }
 
+/// [NestedScrollView]のサンプルコードをそのまま突っ込んだページ
 class NestedScrollViewSamplePage extends StatelessWidget {
   const NestedScrollViewSamplePage();
 
