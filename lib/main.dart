@@ -9,6 +9,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        tabBarTheme: TabBarTheme(labelColor: Colors.black),
       ),
       home: const MyHomePage(),
     );
@@ -34,15 +35,22 @@ class MyHomePage extends StatelessWidget {
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             return <Widget>[
               SliverList(
-                delegate: SliverChildBuilderDelegate(
-                  (context, index) {
-                    return Container(
-                      color: Colors.green,
-                      height: 60.0,
-                      child: Icon(Icons.print),
-                    );
-                  },
-                  childCount: 2,
+                delegate: SliverChildListDelegate(
+                  [
+                    Container(
+                      color: Colors.grey,
+                      height: 220.0,
+                      child: Center(
+                        child: const Text(
+                          'Header',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 24.0,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
               SliverPersistentHeader(
@@ -93,7 +101,7 @@ class _StickyTabBarDelegate extends SliverPersistentHeaderDelegate {
     double shrinkOffset,
     bool overlapsContent,
   ) {
-    return Container(color: Colors.blue, child: tabBar);
+    return Container(color: Colors.white, child: tabBar);
   }
 
   @override
