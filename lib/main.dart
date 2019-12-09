@@ -12,7 +12,6 @@ class MyApp extends StatelessWidget {
       ),
       home: const StickyTabsPage(),
 //      home: const NestedScrollViewSamplePage(),
-//      home: const StickyTabsPage(),
     );
   }
 }
